@@ -1,0 +1,120 @@
+:root {
+      --bg: #f9f9f9;
+      --text: #222;
+      --muted: #666;
+      --border: #ddd;
+      --accent: #a8b99a;
+    }
+
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero .circle {
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    margin: 20px auto;
+    overflow: hidden; /* Pour que l’image ne dépasse pas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit le cercle sans déformation */
+    border-radius: 50%; /* Garde l’image bien ronde */
+  }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(22px, 3vw, 32px);
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+    .hero p {
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav { flex-wrap: wrap; }
+      .nav-links { display: none; }
+    }
+
+
+    /*;;;; benefit part;;;*/
+
+     .benefits-section {
+      padding: 50px 20px;
+    }
+
+    .benefits-title {
+      font-size: 24px;
+      font-style: italic;
+      margin-bottom: 40px;
+      text-align:center;
+    }
+
+    .benefits-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .benefit-box {
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
+
+    .benefit-box h3 {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .benefit-box p {
+      font-size: 15px;
+      line-height: 1.6;
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+    .benefit-join-button {
+      margin-top: 40px;
+      text-align:center;
+    }
+
+    .benefit-join-button button {
+      background-color: #d8ded4;
+      border: none;
+      padding: 10px 60px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: 'Georgia', serif;
+    }
+
+    .benefit-join-button button:hover {
+      background-color: #c5cfc2;
+    }
+
+    @media (max-width: 768px) {
+      .benefits-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
