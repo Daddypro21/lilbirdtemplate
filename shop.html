@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <!-- Roboto font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <!-- Dancing font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,19 +12,16 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-papbZoABlE+GECZnUAK6jHfOdGR0W8UbHg+VRlQgX1rKZg+zNheq+bGcgK4g6HoK0yS9hNsd4x5e7b9JkI7DAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/footer.css">
-        <link rel="stylesheet" href="css/about.css">
-       
-    
-    
-    <title>About</title>
+        <link rel="stylesheet" href="css/shop.css">
+   
+    <title>Shop</title>
 </head>
 <body>
     
-    
-<!-- Navbar -->
+
+     <!-- Navbar -->
         <nav>
             <div class="logo">
                 A Lil Bird
@@ -57,61 +51,84 @@
             </div>
         </nav>
         <!-- EndNavbar -->
-        <!-- EndHeader -->
+    <!-- Hero Section -->
+<section class="heros">
+  <h1 class="heros-title">A Lil Bird Shop</h1>
+</section>
 
-      <section class="hero">
-    <div class="circle">
-      <img src="images/lilbird.png" alt="Logo" />
-    </div>
-    <h1>What is A Lil Bird</h1>
-    <p>
-      My goal is to share the Gospel and what I learned about God so far. I’m still learning,
-      as most of us are. Still, I want to make a community of believers who support, care for,
-      and love each other as we are intended to do. I want to create a safe place where I share my story,
-      and you share yours. I can’t wait to start this new relationship with you. I hope you learn
-      a little about me and I can’t wait to get to know each and every one of you.
-    </p>
-  </section>
+<!-- Filters Section -->
+<section class="filters">
+  <div class="categories">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="digital">Digital</button>
+    <button class="filter-btn" data-filter="notebooks">Notebooks</button>
+    <button class="filter-btn" data-filter="merch">Merch</button>
+  </div>
 
-  <div class="mission-block fade-in-on-scroll">
-    <section class="mission-section ">
-    <div class="mission-container">
-      <div class="mission-image">
-        <img src="https://images.pexels.com/photos/1883382/pexels-photo-1883382.jpeg" alt="People reading the Bible">
-      </div>
-      <div class="mission-content">
-        <h2 class="mission-title">My Mission</h2>
-        <p class="mission-text">
-          My goal is to share the Gospel and what I learned about God so far. I'm still learning, as most of us are. Still, I want to make a community of believers who support, care for, and love each other as we are intended to do. I want to create a safe place where I share my story, and you share yours. I can't wait to start this new relationship with you. I hope you learn a little about me and I can't wait to get to know each and every one of you.
-        </p>
-        <a href="#" class="join-button">JOIN US</a>
-      </div>
+  <div class="dropdown">
+    <button class="dropdown-btn" onclick="toggleDropdown()">Filter ▾</button>
+    <div class="dropdown-content" id="dropdownMenu">
+      <button onclick="applyFilter('all')">All</button>
+      <button onclick="applyFilter('digital')">Digital</button>
+      <button onclick="applyFilter('notebooks')">Notebooks</button>
+      <button onclick="applyFilter('merch')">Merch</button>
     </div>
-  </section>
-</div>
-  <section class="benefits-section">
-    <h2 class="benefits-title">The Community Benefits</h2>
-    <div class="benefits-container">
-      <div class="benefit-box">
-        <h3>Free Products</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem sapien, ultrices vitae mattis eget, fermentum non ipsum.</p>
-      </div>
-      <div class="benefit-box">
-        <h3>Get Updates</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem sapien, ultrices vitae mattis eget, fermentum non ipsum.</p>
-      </div>
-      <div class="benefit-box">
-        <h3>Discounts</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem sapien, ultrices vitae mattis eget, fermentum non ipsum.</p>
-      </div>
-    </div>
-    <div class="benefit-join-button">
-      <button>JOIN</button>
-    </div>
-  </section>
+  </div>
+</section>
+
+<!-- Products Grid -->
+<section class="products">
+  <div class="product-card digital">
+    <a href="product.html">
+    <img src="/images/sermon.png" alt="Product 1">
+    <p>Digital Bible Study Guide</p>
+    <span>$1.99</span>
+    </a>
+  </div>
+  <div class="product-card digital">
+    <a href="product.html">
+    <img src="/images/bible_study_guide.png" alt="Product 2">
+    <p>Digital Bible Study Guide</p>
+    <span>$1.99</span>
+    </a>
+  </div>
+  <div class="product-card merch">
+    <a href="product.html">
+    <img src="/images/gratitudejournal.png" alt="Product 3">
+    <p>Digital Bible Study Guide</p>
+    <span>$1.99</span>
+    </a>
+  </div>
+
+  <div class="product-card digital">
+    <a href="product.html">
+    <img src="/images/sermon.png" alt="Product 1">
+    <p>Digital Bible Study Guide</p>
+    <span>$1.99</span>
+    </a>
+  </div>
+  <div class="product-card digital">
+    <a href="product.html">
+    <img src="/images/bible_study_guide.png" alt="Product 2">
+    <p>Digital Bible Study Guide</p>
+    <span>$1.99</span>
+    </a>
+  </div>
+  <div class="product-card merch">
+    <a href="product.html">
+    <img src="/images/gratitudejournal.png" alt="Product 3">
+    <p>Digital Bible Study Guide</p>
+    <span>$1.99</span>
+    </a>
+  </div>
+</section>
+
+
+ <!-- EndBody -->
         <button id="backToTop" title="Remonter en haut">↑</button>
+        <!-- Footer -->
 
-          <footer class="site-footer fade-in-on-scroll">
+        <footer class="site-footer fade-in-on-scroll">
             <div class="footer-container">
                 <div class="footer-left">
                     <h2 class="footer-brand">A lil' Bird</h2>
@@ -198,5 +215,34 @@
             });
             });
         </script>
+<script>
+// Dropdown toggle
+function toggleDropdown() {
+  const dropdown = document.getElementById("dropdownMenu");
+  dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+}
+
+// Filter products
+function applyFilter(category) {
+  const cards = document.querySelectorAll('.product-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  cards.forEach(card => {
+    if (category === 'all' || card.classList.contains(category)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  buttons.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === category);
+  });
+
+  // Hide dropdown after selection
+  document.getElementById("dropdownMenu").style.display = "none";
+}
+</script>
+
 </body>
 </html>

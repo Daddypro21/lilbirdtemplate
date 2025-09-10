@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <!-- Roboto font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <!-- Dancing font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,19 +12,14 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-papbZoABlE+GECZnUAK6jHfOdGR0W8UbHg+VRlQgX1rKZg+zNheq+bGcgK4g6HoK0yS9hNsd4x5e7b9JkI7DAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/footer.css">
-        <link rel="stylesheet" href="css/about.css">
-       
+        <link rel="stylesheet" href="css/cart.css">
     
-    
-    <title>About</title>
+    <title>Cart</title>
 </head>
 <body>
-    
-    
-<!-- Navbar -->
+     <!-- Navbar -->
         <nav>
             <div class="logo">
                 A Lil Bird
@@ -35,7 +27,7 @@
             
             </div>
             <ul class="nav-links"> 
-                <li><a href="index.html">Home</a></li>
+                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -57,61 +49,77 @@
             </div>
         </nav>
         <!-- EndNavbar -->
-        <!-- EndHeader -->
 
-      <section class="hero">
-    <div class="circle">
-      <img src="images/lilbird.png" alt="Logo" />
-    </div>
-    <h1>What is A Lil Bird</h1>
-    <p>
-      My goal is to share the Gospel and what I learned about God so far. I’m still learning,
-      as most of us are. Still, I want to make a community of believers who support, care for,
-      and love each other as we are intended to do. I want to create a safe place where I share my story,
-      and you share yours. I can’t wait to start this new relationship with you. I hope you learn
-      a little about me and I can’t wait to get to know each and every one of you.
-    </p>
-  </section>
+    <div class="container">
+    <h1>Cart</h1>
 
-  <div class="mission-block fade-in-on-scroll">
-    <section class="mission-section ">
-    <div class="mission-container">
-      <div class="mission-image">
-        <img src="https://images.pexels.com/photos/1883382/pexels-photo-1883382.jpeg" alt="People reading the Bible">
+    <div class="cart-content">
+      <div class="cart-items" id="cart-items">
+        <!-- Product 1 -->
+        <div class="cart-item" data-price="3.99">
+          <img src="images/bible_study_guide.png" alt="Product 1">
+          <div class="item-details">
+            <div class="item-title">Digital Bible Study</div>
+            <div class="item-price">$3.99</div>
+            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+            <div class="quantity-controls">
+              <button onclick="changeQuantity(this, -1)">-</button>
+              <input type="number" value="1" min="1" onchange="updateTotal()">
+              <button onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="cart-item" data-price="1.99">
+          <img src="images/gratitudejournal.png" alt="Product 2">
+          <div class="item-details">
+            <div class="item-title">Digital Bible Study</div>
+            <div class="item-price">$1.99</div>
+            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+            <div class="quantity-controls">
+              <button onclick="changeQuantity(this, -1)">-</button>
+              <input type="number" value="1" min="1" onchange="updateTotal()">
+              <button onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="cart-item" data-price="2.99">
+          <img src="images/sermon.png" alt="Product 3">
+          <div class="item-details">
+            <div class="item-title">Digital Bible Study</div>
+            <div class="item-price">$2.99</div>
+            <div class="item-desc">Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+            <div class="quantity-controls">
+              <button onclick="changeQuantity(this, -1)">-</button>
+              <input type="number" value="1" min="1" onchange="updateTotal()">
+              <button onclick="changeQuantity(this, 1)">+</button>
+            </div>
+            <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+          </div>
+        </div>
       </div>
-      <div class="mission-content">
-        <h2 class="mission-title">My Mission</h2>
-        <p class="mission-text">
-          My goal is to share the Gospel and what I learned about God so far. I'm still learning, as most of us are. Still, I want to make a community of believers who support, care for, and love each other as we are intended to do. I want to create a safe place where I share my story, and you share yours. I can't wait to start this new relationship with you. I hope you learn a little about me and I can't wait to get to know each and every one of you.
-        </p>
-        <a href="#" class="join-button">JOIN US</a>
+
+      <div class="cart-summary">
+        <h2>Summary</h2>
+        <div class="summary-line"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+        <div class="summary-line"><span>Tax</span><span id="tax">$0.00</span></div>
+        <div class="summary-line total-line"><span>Total</span><span id="total">$0.00</span></div>
+        <button class="checkout-btn">CHECKOUT</button>
       </div>
     </div>
-  </section>
-</div>
-  <section class="benefits-section">
-    <h2 class="benefits-title">The Community Benefits</h2>
-    <div class="benefits-container">
-      <div class="benefit-box">
-        <h3>Free Products</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem sapien, ultrices vitae mattis eget, fermentum non ipsum.</p>
-      </div>
-      <div class="benefit-box">
-        <h3>Get Updates</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem sapien, ultrices vitae mattis eget, fermentum non ipsum.</p>
-      </div>
-      <div class="benefit-box">
-        <h3>Discounts</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem sapien, ultrices vitae mattis eget, fermentum non ipsum.</p>
-      </div>
-    </div>
-    <div class="benefit-join-button">
-      <button>JOIN</button>
-    </div>
-  </section>
+  </div>
+
+
+   <!-- EndBody -->
         <button id="backToTop" title="Remonter en haut">↑</button>
+        <!-- Footer -->
 
-          <footer class="site-footer fade-in-on-scroll">
+        <footer class="site-footer fade-in-on-scroll">
             <div class="footer-container">
                 <div class="footer-left">
                     <h2 class="footer-brand">A lil' Bird</h2>
@@ -198,5 +206,41 @@
             });
             });
         </script>
+  <script>
+    const TAX_RATE = 0.037; // 3.7%
+
+    function changeQuantity(button, delta) {
+      const input = button.parentElement.querySelector('input');
+      let current = parseInt(input.value);
+      current = Math.max(1, current + delta);
+      input.value = current;
+      updateTotal();
+    }
+
+    function removeItem(button) {
+      const item = button.closest('.cart-item');
+      item.remove();
+      updateTotal();
+    }
+
+    function updateTotal() {
+      let subtotal = 0;
+      document.querySelectorAll('.cart-item').forEach(item => {
+        const price = parseFloat(item.getAttribute('data-price'));
+        const qty = parseInt(item.querySelector('input').value);
+        subtotal += price * qty;
+      });
+
+      const tax = +(subtotal * TAX_RATE).toFixed(2);
+      const total = +(subtotal + tax).toFixed(2);
+
+      document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+      document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+      document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+    }
+
+    // Initial call
+    document.addEventListener('DOMContentLoaded', updateTotal);
+  </script>
 </body>
 </html>

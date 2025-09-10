@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <!-- Dancing font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,15 +14,12 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/footer.css">
-        <link rel="stylesheet" href="css/blog.css">
-       
-   
-   
-    <title>Blog</title>
+        <link rel="stylesheet" href="css/product.css">
+    
+    <title>Product</title>
 </head>
 <body>
-    
-<!-- Navbar -->
+     <!-- Navbar -->
         <nav>
             <div class="logo">
                 A Lil Bird
@@ -31,7 +27,7 @@
             
             </div>
             <ul class="nav-links"> 
-                <li><a href="index.html">Home</a></li>
+                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -53,18 +49,86 @@
             </div>
         </nav>
         <!-- EndNavbar -->
-    
-  <div class="search-container">
-    <input type="text" placeholder="Search..." class="search-box" />
+
+    <main>
+    <section class="product-detail">
+      <div class="product-image">
+        <img src="images/bible_study_guide.png" alt="Bible Study Guide">
+      </div>
+     <div class="product-info">
+  <h1>Digital Bible Study</h1>
+  <div class="starss">★★★★★ <span class="reviewss">(191)</span></div>
+  {# <div class="stars" data-rating="4.5"></div>
+<span class="reviews">(191)</span> #}
+
+  <p>Lorem ipsum dolor sit amet...</p>
+
+  <div class="details-toggle">
+    <button onclick="toggleDetails()">Details ▼</button>
+    <div id="details" style="display: none;">
+      <p>Contenu détaillé du produit ici...</p>
+    </div>
   </div>
 
-  <section class="latest-post">
-    <h2><span class="highlight">Latest Post:</span> <br>Who is God to You and how to spend time with him</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem sapien, ultrices vitae mattis eget, fermentum non ipsum.</p>
+  <form method="get" action="cart.html">
+    <div class="quantity">
+      <button type="button" onclick="decrementQuantity()">-</button>
+      <input type="number" id="quantity" name="quantity" value="1" min="1" />
+      <button type="button" onclick="incrementQuantity()">+</button>
+    </div>
+ 
+    <button type="" class="join-btn">Order</button>
+   
+  </form>
+</div>
+
+    </section>
+
+
+      <section class="reviews-section">
+    <h2>Reviews</h2>
+
+    <div class="review">
+      <div class="review-avatar">J</div>
+      <div class="review-content">
+        <div class="review-header">
+          <div class="review-name">Justin Hamber</div>
+          <div class="review-date">Aug 22, 2025</div>
+        </div>
+        <div class="review-meta">
+          <div class="review-stars" data-rating="4.5"></div>
+          <div>— Beige Bible Study</div>
+        </div>
+        <div class="review-text">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+          pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+          aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus.
+        </div>
+      </div>
+    </div>
+
+    <div class="review">
+      <div class="review-avatar">J</div>
+      <div class="review-content">
+        <div class="review-header">
+          <div class="review-name">Jayla Smith</div>
+          <div class="review-date">Aug 22, 2025</div>
+        </div>
+        <div class="review-meta">
+          <div class="review-stars" data-rating="4"></div>
+          <div>— Beige Bible Study</div>
+        </div>
+        <div class="review-text">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+          pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+          aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus.
+        </div>
+      </div>
+    </div>
+
   </section>
 
-
-<div class="card-block">
+    <div class="card-block">
     <h2 class="latest-posts-h2">Posts</h2>
 
     <div class="slider-wrapper">
@@ -73,72 +137,60 @@
       <div class="cards-slider">
         <!-- Card 1 -->
         <div class="card-latest-posts">
-            <a href="detail.html">
           <img src="https://images.pexels.com/photos/5838909/pexels-photo-5838909.jpeg" alt="Post 1">
           <div class="card-text">
             <h3>How to Spend Time With God</h3>
             <p>As a new believer</p>
           </div>
           <div class="card-bottom"></div>
-          </a>
         </div>
 
         <!-- Card 2 -->
         <div class="card-latest-posts">
-            <a href="detail.html">
           <img src="https://images.pexels.com/photos/1639047/pexels-photo-1639047.jpeg" alt="Post 2">
           <div class="card-text">
             <h3>Who is God to You?</h3>
             <p>And how to spend time with Him</p>
           </div>
           <div class="card-bottom"></div>
-          </a>
         </div>
 
         <!-- Card 3 -->
         <div class="card-latest-posts">
-            <a href="detail.html">
           <img src="https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg" alt="Post 3">
           <div class="card-text">
             <h3>Spend Time with God 101</h3>
             <p>Click here</p>
           </div>
           <div class="card-bottom"></div>
-        </a>
         </div>
 
         <!-- Duplicate Cards to simulate more than 6 -->
         <div class="card-latest-posts">
-            <a href="detail.html">
           <img src="https://images.pexels.com/photos/5838909/pexels-photo-5838909.jpeg" alt="Post 4">
           <div class="card-text">
             <h3>How to Spend Time With God</h3>
             <p>As a new believer</p>
           </div>
           <div class="card-bottom"></div>
-        </a>
         </div>
 
         <div class="card-latest-posts">
-            <a href="detail.html">
           <img src="https://images.pexels.com/photos/1639047/pexels-photo-1639047.jpeg" alt="Post 5">
           <div class="card-text">
             <h3>Who is God to You?</h3>
             <p>And how to spend time with Him</p>
           </div>
           <div class="card-bottom"></div>
-        </a>
         </div>
 
         <div class="card-latest-posts">
-            <a href="detail.html">
           <img src="https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg" alt="Post 6">
           <div class="card-text">
             <h3>Spend Time with God 101</h3>
             <p>Click here</p>
           </div>
           <div class="card-bottom"></div>
-          </a>
         </div>
 
         <!-- Add more cards here if needed -->
@@ -147,10 +199,15 @@
       <button class="slider-btn right">&#10095;</button>
     </div>
 
-    
+    <p class="p-latest-posts-btn">
+      <a href="#" class="latest-posts-button">SEE MORE</a>
+    </p>
   </div>
 
 
+  </main>
+
+  
    <!-- EndBody -->
         <button id="backToTop" title="Remonter en haut">↑</button>
         <!-- Footer -->
@@ -242,8 +299,105 @@
             });
             });
         </script>
+   <script>
+  function incrementQuantity() {
+    const input = document.getElementById("quantity");
+    input.value = parseInt(input.value) + 1;
+  }
+
+  function decrementQuantity() {
+    const input = document.getElementById("quantity");
+    if (parseInt(input.value) > 1) {
+      input.value = parseInt(input.value) - 1;
+    }
+  }
+
+  function toggleDetails() {
+    const details = document.getElementById("details");
+    details.style.display = details.style.display === "none" ? "block" : "none";
+  }
+</script>
+
+ <script>
+  function incrementQuantity() {
+    const input = document.getElementById("quantity");
+    input.value = parseInt(input.value) + 1;
+  }
+
+  function decrementQuantity() {
+    const input = document.getElementById("quantity");
+    if (parseInt(input.value) > 1) {
+      input.value = parseInt(input.value) - 1;
+    }
+  }
+
+  function toggleDetails() {
+    const details = document.getElementById("details");
+    details.style.display = details.style.display === "none" ? "block" : "none";
+  }
+
+  function renderStars() {
+    const starContainers = document.querySelectorAll('.stars');
+
+    starContainers.forEach(container => {
+      const rating = parseFloat(container.getAttribute('data-rating'));
+      const fullStars = Math.floor(rating);
+      const halfStar = rating % 1 >= 0.5 ? 1 : 0;
+      const emptyStars = 5 - fullStars - halfStar;
+
+      let starsHTML = '';
+
+      for (let i = 0; i < fullStars; i++) {
+        starsHTML += '★'; // étoile pleine
+      }
+
+      if (halfStar) {
+        starsHTML += '⯪'; // étoile demi (ou alternative : '☆' ou autre)
+      }
+
+      for (let i = 0; i < emptyStars; i++) {
+        starsHTML += '☆'; // étoile vide
+      }
+
+      container.innerHTML = starsHTML;
+    });
+  }
+
+  // Appel au chargement
+  document.addEventListener('DOMContentLoaded', renderStars);
+</script>
+
+
 
 <script>
+    function renderReviewStars() {
+      const starContainers = document.querySelectorAll('.review-stars');
+
+      starContainers.forEach(container => {
+        const rating = parseFloat(container.getAttribute('data-rating'));
+        const fullStars = Math.floor(rating);
+        const halfStar = rating % 1 >= 0.5 ? 1 : 0;
+        const emptyStars = 5 - fullStars - halfStar;
+
+        let stars = '';
+        for (let i = 0; i < fullStars; i++) {
+          stars += '★';
+        }
+        if (halfStar) {
+          stars += '⯪'; // demi-étoile visuelle alternative
+        }
+        for (let i = 0; i < emptyStars; i++) {
+          stars += '☆';
+        }
+
+        container.innerHTML = stars;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', renderReviewStars);
+  </script>
+
+  <script>
     const slider = document.querySelector('.cards-slider');
     const leftBtn = document.querySelector('.slider-btn.left');
     const rightBtn = document.querySelector('.slider-btn.right');
@@ -258,6 +412,5 @@
       slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
 </script>
-
 </body>
 </html>
