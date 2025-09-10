@@ -106,7 +106,7 @@ body {
 @media (max-width: 768px) {
  .product-detail {
     flex-direction: column;
-    width: 100%;
+    width: 80%;
   }
 
   .product-image img {
